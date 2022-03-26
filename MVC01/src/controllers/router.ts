@@ -1,7 +1,8 @@
-import expressRouter from 'express';
-const routes = expressRouter();
+import express from 'express';
 
-routes.get('/', (req: any, res: any) => {
+const routes = express();
+
+routes.get('/', (_req: express.Request, res: express.Response) => {
 	res.render('./index.ejs');
 })
 
