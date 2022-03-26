@@ -10,6 +10,24 @@
 
 <body>
     <h1>MVC 01</h1>
+    <h2>Data of CPU Usage</h2>
+    <div id="display"> </div>
+    <script>
+        fetch('http://localhost:3005/data')
+            .then(response => response.json())
+            .then(datas => {
+                let output = "";
+                datas.forEach((data) => {
+                    output += `
+											<h3>id ${data.id}</h3>
+											<p>CPU Usage (Core): ${data.cpu}</p>
+											<p>Time Usage (Seconds): ${data.time}</p>
+											_________________________________________
+										`
+                })
+                document.getElementById('display').innerHTML = output;
+            })
+    </script>
 </body>
 
 </html>
