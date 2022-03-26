@@ -1,12 +1,19 @@
 {
-  "name": "MVC01",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "body-parser": "^1.19.2",
-    "ejs": "^3.1.6",
-    "fs": "^0.0.1-security",
-    "nodemon": "^2.0.15"
-  }
+    "name": "MVC01",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "dependencies": {
+        "@types/node": "^17.0.23",
+        "body-parser": "^1.19.2",
+        "ejs": "^3.1.6",
+        "express": "^4.17.3",
+        "fs": "^0.0.1-security",
+        "nodemon": "^2.0.15"
+    },
+    "scripts": {
+        "start": "tsc && node ./dist/app.js",
+        "test": "tsc && node ./dist/app.js",
+        "dev": "tsc && nodemon ./dist/app.js"
+    }
 }
