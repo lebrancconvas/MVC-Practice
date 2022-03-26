@@ -13,7 +13,7 @@
         "nodemon": "^2.0.15"
     },
     "scripts": {
-        "build": "tsc -p",
+        "build": "tsc",
         "start": "node ./dist/app.js",
         "test": "node ./dist/app.js",
         "dev": "nodemon ./src/app.ts"
